@@ -1,5 +1,5 @@
 @isTest
-public class scheduledBatchabledTest {
+public class ScheduledBatchabledTest {
     @testSetup static void createData() {
         List<account> listAcc = new List<account>();
         Account acc1 = new Account(Name = 'Test Account 1');
@@ -36,7 +36,7 @@ public class scheduledBatchabledTest {
     
     @isTest
     public static void testScheduledBatchabled(){
-        scheduledBatchabled batch = new scheduledBatchabled();
+        ScheduledBatchabled batch = new ScheduledBatchabled();
         String sch = '0 0 22 ? * 2#1';
         Test.startTest();
         system.schedule('Test', sch, batch);
